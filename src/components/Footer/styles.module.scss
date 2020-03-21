@@ -1,0 +1,24 @@
+/* Footer */
+.footer {
+  margin: 0 auto;
+  padding: 1em;
+  border-top: 1px solid #dbdbdb;
+
+  p {
+    color: #aaa;
+    font-size: 90%;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.socialsFooter {
+  text-align: center;
+  a {
+    display: inline-block;
+    background-color: #d3d3d3;
+    border-color: #d3d3d3;
+    margin: 4px;
+    width: 38px;
+  }
+}
