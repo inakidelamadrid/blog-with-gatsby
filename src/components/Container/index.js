@@ -1,7 +1,7 @@
 import React from "react"
 import PrimaryContent from "./PrimaryContent"
 const Container = ({ children }) => {
-  return <body>{children}</body>
+  return <div>{children}</div>
 }
 
 export { PrimaryContent }

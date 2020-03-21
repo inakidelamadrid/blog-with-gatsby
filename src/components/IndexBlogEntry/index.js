@@ -26,16 +26,16 @@ const IndexBlogEntry = ({
         </h2>
         <p className={styles.entryMeta}>
           Posted on{" "}
-          <a class="entry-date" href="date.html">
+          <a className="entry-date" href="date.html">
             July 2, 2013
           </a>{" "}
           | By{" "}
-          <a class="entry-author" href="author.html">
+          <a className="entry-author" href="author.html">
             {author}
           </a>{" "}
           | Tags{" "}
           {tags.map(tag => (
-            <a class="label label-primary" href={tag.href}>
+            <a key={tag.title} className="label label-primary" href={tag.href}>
               {tag.title}
             </a>
           ))}

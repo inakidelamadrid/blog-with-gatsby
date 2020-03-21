@@ -33,3 +33,18 @@ a, a:focus, a:hover {
 .btn {
   border-radius: 2px;
 }
+
+.content {
+  margin: 2.8em auto;
+  max-width: 860px;
+}
+
+.content-head {
+  color: #aaa;
+  border-bottom: 1px solid #eee;
+  padding: 0.4em 0;
+  font-size: 1.3em;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
