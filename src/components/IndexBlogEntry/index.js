@@ -1,7 +1,9 @@
 import React from "react"
+import styles from "./styles.module.scss"
+
 const defaultImage = (
   <img
-    class="entry-avatar"
+    className={styles.entryAvatar}
     alt="Paul Laros"
     height="52"
     width="52"
@@ -16,13 +18,13 @@ const IndexBlogEntry = ({
   image = defaultImage,
 }) => {
   return (
-    <section class="post">
-      <header class="entry-header">
+    <section className={styles.post}>
+      <header>
         {image}
-        <h2 class="entry-title">
+        <h2 className={styles.entryTitle}>
           <a href="single.html">{title}</a>
         </h2>
-        <p class="entry-meta">
+        <p className={styles.entryMeta}>
           Posted on{" "}
           <a class="entry-date" href="date.html">
             July 2, 2013
@@ -39,7 +41,7 @@ const IndexBlogEntry = ({
           ))}
         </p>
       </header>
-      <div class="entry-description">{content}</div>
+      <div className={styles.entryDescription}>{content}</div>
     </section>
   )
 }
