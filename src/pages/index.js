@@ -3,9 +3,12 @@ import range from "lodash/range"
 import "../styles/main.scss"
 import IndexBlogEntry from "../components/IndexBlogEntry"
 import Container, { PrimaryContent } from "../components/Container"
+import Header from "../components/Header"
+
 export default () => (
   <Container>
     <PrimaryContent>
+      <Header name="BorealSummit"/>
       {range(5).map(n => (
         <IndexBlogEntry
           author="Paul Laros"
