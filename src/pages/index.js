@@ -1,8 +1,10 @@
 import React from "react"
 import "../styles/main.scss"
 import IndexBlogEntry from "../components/IndexBlogEntry"
+import Container, { PrimaryContent } from "../components/Container"
 export default () => (
-  <div>
+  <Container>
+    <PrimaryContent>
     <IndexBlogEntry
       author="Paul Laros"
       content={
@@ -19,5 +21,6 @@ export default () => (
       title="Why should designers learn how to code"
     />
     <p>Hello mundo!</p>
-  </div>
+  </PrimaryContent>
+  </Container>
 )
