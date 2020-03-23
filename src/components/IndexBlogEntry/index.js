@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styles from "./styles.module.scss"
 
 const defaultImage = (
@@ -13,6 +14,7 @@ const defaultImage = (
 const IndexBlogEntry = ({
   author,
   content,
+  linkTo,
   tags,
   title,
   image = defaultImage,
@@ -22,7 +24,7 @@ const IndexBlogEntry = ({
       <header>
         {image}
         <h2 className={styles.entryTitle}>
-          <a href="single.html">{title}</a>
+          <Link to={linkTo}>{title}</Link>
         </h2>
         <p className={styles.entryMeta}>
           Posted on{" "}

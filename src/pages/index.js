@@ -26,6 +26,7 @@ export default () => (
           key={n}
           tags={[{ title: "HTML5", href: "tag.html" }]}
           title="Why should designers learn how to code"
+          linkTo="/post"
         />
       ))}
       <Footer />
