@@ -1,0 +1,38 @@
+/* Post */
+.post, .comments {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0px 1px 1px #aaa;
+  padding: 3em;
+  margin: 2em auto;
+}
+
+.entryTitle {
+  color: #222;
+  font-size: 1.8em;
+  margin: 0 0 0.2em;
+  a {
+  color: #222;
+  }
+}
+
+.entryAvatar {
+  border-radius: 50%;
+  float: right;
+  margin-left: 1em;
+}
+
+.entryDescription {
+  color: #344151;
+  font-family: "Source Sans Pro",sans-serif;
+  font-size: 1.15em;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.5em;
+}
+
+.entryMeta {
+  color: #999;
+  font-size: 90%;
+  margin: 0 0 1.8em;
+}
