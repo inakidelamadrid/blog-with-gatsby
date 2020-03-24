@@ -1,11 +1,16 @@
 import React from "react"
 import styles from "./styles.module.scss"
 
-const BlogEntry = props => {
+const defaultImage = (
+  <img
+    src="https://source.unsplash.com/random/850x400"
+    className={styles.imgResponsive}
+  />
+)
+const BlogEntry = ({ image = defaultImage }) => {
   return (
     <>
-      <img src="https://source.unsplash.com/random/850x400" class="img-responsive" />
-
+      {image}
       <section className={styles.post}>
         <header className="entry-header">
           <img
