@@ -4,12 +4,12 @@ import styles from "./styles.module.scss"
 const BlogEntry = props => {
   return (
     <>
-      <img src="florian-klauer.jpg" class="img-responsive" />
+      <img src="https://source.unsplash.com/random/850x400" class="img-responsive" />
 
       <section className={styles.post}>
         <header className="entry-header">
           <img
-            className={styles.entryAvata}
+            className={styles.entryAvatar}
             alt="Paul Laros"
             height="52"
             width="52"
