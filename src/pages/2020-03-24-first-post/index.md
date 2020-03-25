@@ -1,9 +1,9 @@
 ---
 path: "/first-post"
-date: "2018/07/21"
-title: "My first post"
+date: "2020/03/23"
+title: "Why Gatsby is great"
 tags: ['this', 'that']
-excerpt: "Preview of my blog post"
+excerpt: "Gatsby is a node frontend framework that uses React as the rendering library. It's pretty awesome to build static sites."
 ---
 
 Lorem ipsum dolorem.

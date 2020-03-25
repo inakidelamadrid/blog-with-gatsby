@@ -4,6 +4,7 @@ import { graphql} from "gatsby"
 import Container, { PrimaryContent } from "../components/Container"
 import IndexBlogEntry from "../components/IndexBlogEntry"
 import SimpleHeader from "../components/SimpleHeader"
+import Footer from "../components/Footer"
 
 const Layout = ({ data }) => {
   //console.log("%c GraphQL data", "font-weight: bold; color: blue;", data)
@@ -25,6 +26,7 @@ const Layout = ({ data }) => {
             tags={[]}
           />
         ))}
+      <Footer/>
       </PrimaryContent>
     </Container>
   )

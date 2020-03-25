@@ -6,8 +6,8 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'My Blog',
-    description: 'This is a cool blog'
+    title: 'Borealsummit\'s Blog',
+    description: 'Thoughts and wanderings'
   },
   plugins: [
   `gatsby-plugin-sass`,
