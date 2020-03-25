@@ -1,6 +1,6 @@
 import React from "react"
 import map from "lodash/map"
-import { StaticQuery, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import SimpleHeader from "../components/SimpleHeader"
 
 const Layout = ({ data }) => {
@@ -21,7 +21,9 @@ const Layout = ({ data }) => {
 
 export const query = graphql`
   query HomePageQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      sort: {order: DESC, fields: [frontmatter___date]}
+    ) {
       edges {
         node {
           frontmatter {
