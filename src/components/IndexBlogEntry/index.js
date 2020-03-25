@@ -1,28 +1,19 @@
 import React from "react"
 import { Link } from "gatsby"
 import styles from "./styles.module.scss"
+import GravatarImage from "../GravatarImage"
 
-const defaultImage = (
-  <img
-    className={styles.entryAvatar}
-    alt="Paul Laros"
-    height="52"
-    width="52"
-    src="http://www.gravatar.com/avatar/ea67e860739cd91fe40b6797e97e6820.jpg?s=52"
-  />
-)
 const IndexBlogEntry = ({
   author,
   content,
   linkTo,
   tags,
   title,
-  image = defaultImage,
 }) => {
   return (
     <section className={styles.post}>
       <header>
-        {image}
+        <GravatarImage styles={styles} />
         <h2 className={styles.entryTitle}>
           <Link to={linkTo}>{title}</Link>
         </h2>

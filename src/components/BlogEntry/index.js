@@ -1,5 +1,6 @@
 import React from "react"
 import styles from "./styles.module.scss"
+import GravatarImage from "../GravatarImage"
 
 const defaultImage = (
   <img
@@ -13,15 +14,9 @@ const BlogEntry = ({ description, title, image = defaultImage }) => {
       {image}
       <section className={styles.post}>
         <header className="entry-header">
-          <img
-            className={styles.entryAvatar}
-            alt="Paul Laros"
-            height="52"
-            width="52"
-            src="http://www.gravatar.com/avatar/ea67e860739cd91fe40b6797e97e6820.jpg?s=52"
-          />
+          <GravatarImage styles={styles}/>
           <h2 className={styles.entryTitle}>
-            <a href="single.html">Von - Minimalist Blog Theme</a>
+            <a href="single.html">{title}</a>
           </h2>
           <p className={styles.entryMeta}>
             Posted on{" "}
