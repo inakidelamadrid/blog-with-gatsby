@@ -17,8 +17,15 @@
   a {
     display: inline-block;
     background-color: #d3d3d3;
+    color: #fff;
     border-color: #d3d3d3;
     margin: 4px;
     width: 38px;
+    height: 38px;
+    padding: 5px;
+    svg{
+      width: 100%;
+      height: 100%;
+    }
   }
 }
