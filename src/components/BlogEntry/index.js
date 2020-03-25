@@ -7,7 +7,7 @@ const defaultImage = (
     className={styles.imgResponsive}
   />
 )
-const BlogEntry = ({ image = defaultImage }) => {
+const BlogEntry = ({description, title, image = defaultImage}) => {
   return (
     <>
       {image}
