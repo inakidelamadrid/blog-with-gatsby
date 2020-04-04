@@ -1,6 +1,6 @@
 ---
 path: "/second-post"
-date: "2018/07/21"
+date: "2018/07/21 12:00"
 title: "Promisify your callbacks"
 tags: ['this', 'that']
 excerpt: "Callbacks are ugly. Promisify them."

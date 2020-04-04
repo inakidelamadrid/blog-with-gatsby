@@ -8,24 +8,24 @@ const defaultImage = (
     className={styles.imgResponsive}
   />
 )
-const BlogEntry = ({ description, title, image = defaultImage }) => {
+const BlogEntry = ({ datetime, description, title, image = defaultImage }) => {
   return (
     <>
       {image}
       <section className={styles.post}>
         <header className="entry-header">
-          <GravatarImage styles={styles}/>
+          <GravatarImage styles={styles} />
           <h2 className={styles.entryTitle}>
             <a href="single.html">{title}</a>
           </h2>
           <p className={styles.entryMeta}>
             Posted on{" "}
             <a className="entry-date" href="date.html">
-              July 19, 2013
+              {datetime}
             </a>{" "}
             | By{" "}
             <a className={styles.entryAuthor} href="author.html">
-              Paul Laros
+              Ignacio De La Madrid
             </a>{" "}
             | Tags{" "}
             <a className="label label-danger" href="tag.html">

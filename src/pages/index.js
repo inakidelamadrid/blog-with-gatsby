@@ -7,10 +7,8 @@ import SimpleHeader from "../components/SimpleHeader"
 import Footer from "../components/Footer"
 
 const Layout = ({ data }) => {
-  //console.log("%c GraphQL data", "font-weight: bold; color: blue;", data)
   const { edges } = data.allMarkdownRemark
   const posts = map(edges, "node.frontmatter")
-
   //console.log("%c Posts", "font-weight: bold; color: blue;", posts)
   return (
     <Container>
@@ -20,6 +18,7 @@ const Layout = ({ data }) => {
           <IndexBlogEntry
             key={post.path}
             content={post.excerpt}
+            datetime={post.date}
             linkTo={post.path}
             author="Ignacio De La Madrid"
             title={post.title}

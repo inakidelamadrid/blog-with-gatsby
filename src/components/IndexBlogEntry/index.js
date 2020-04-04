@@ -3,13 +3,7 @@ import { Link } from "gatsby"
 import styles from "./styles.module.scss"
 import GravatarImage from "../GravatarImage"
 
-const IndexBlogEntry = ({
-  author,
-  content,
-  linkTo,
-  tags,
-  title,
-}) => {
+const IndexBlogEntry = ({ author, content, datetime, linkTo, tags, title }) => {
   return (
     <section className={styles.post}>
       <header>
@@ -20,7 +14,7 @@ const IndexBlogEntry = ({
         <p className={styles.entryMeta}>
           Posted on{" "}
           <a className="entry-date" href="date.html">
-            July 2, 2013
+            {datetime}
           </a>{" "}
           | By{" "}
           <a className="entry-author" href="author.html">

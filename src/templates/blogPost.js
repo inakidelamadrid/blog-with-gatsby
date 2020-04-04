@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import BlogEntry from "../components/BlogEntry"
+import Footer from "../components/Footer"
 import Container, { PrimaryContent } from "../components/Container"
 
 const Template = ({ data }) => {
@@ -10,7 +11,12 @@ const Template = ({ data }) => {
   return (
     <Container>
       <PrimaryContent>
-        <BlogEntry title={title} description={markdownRemark.html} />
+        <BlogEntry
+          datetime={date}
+          title={title}
+          description={markdownRemark.html}
+        />
+        <Footer />
       </PrimaryContent>
     </Container>
   )
