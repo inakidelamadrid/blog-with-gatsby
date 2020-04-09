@@ -1,19 +1,18 @@
 import React from "react"
 import { Link } from "gatsby"
+import LegoCSSContainer from "../components/LegoCSSContainer"
+import List from "../components/base/List"
 
 const TagIndexTemplate = ({ pageContext }) => {
   const { tags } = pageContext
+  const links = tags.map(tagName => (
+    <Link to={`/tags/${tagName}`}>{tagName}</Link>
+  ))
 
   return (
-    <div>
-      <ul>
-        {tags.map((tagName, index) => (
-          <li key={index}>
-            <Link to={`/tags/${tagName}`}>{tagName}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <LegoCSSContainer>
+      <List elements={links} />
+    </LegoCSSContainer>
   )
 }
 

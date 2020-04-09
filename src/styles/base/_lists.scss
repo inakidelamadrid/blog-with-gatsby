@@ -1,0 +1,28 @@
+// ==================
+// List Styles
+// ==================
+
+.list {
+  li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.list_unstyled {
+  @extend .list;
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.list_numbered {
+  @extend .list;
+  padding-left: 20px;
+  list-style-type: decimal;
+}
+
+.list_nav {
+  @extend .list;
+  padding-left: 0;
+  list-style-type: none;
+}

@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 const TagDetailTemplate = ({ pageContext }) => {
   const { posts, tagName } = pageContext
@@ -11,6 +12,7 @@ const TagDetailTemplate = ({ pageContext }) => {
           <li key={index}>{post.frontmatter.title}</li>
         ))}
       </ul>
+      <div><Link to="/tags">All Tags</Link></div>
     </div>
   )
 }
