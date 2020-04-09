@@ -4,6 +4,11 @@ import styles from "./styles.module.scss"
 import GravatarImage from "../GravatarImage"
 
 const IndexBlogEntry = ({ author, content, datetime, linkTo, tags, title }) => {
+  const links = tags.map(tagName => (
+    <Link to={`/tags/${tagName}`} className="label label-primary">
+      {tagName}
+    </Link>
+  ))
   return (
     <section className={styles.post}>
       <header>
@@ -20,12 +25,7 @@ const IndexBlogEntry = ({ author, content, datetime, linkTo, tags, title }) => {
           <a className="entry-author" href="author.html">
             {author}
           </a>{" "}
-          | Tags{" "}
-          {tags.map(tag => (
-            <a key={tag.title} className="label label-primary" href={tag.href}>
-              {tag.title}
-            </a>
-          ))}
+          | Tags {links}
         </p>
       </header>
       <div className={styles.entryDescription}>{content}</div>

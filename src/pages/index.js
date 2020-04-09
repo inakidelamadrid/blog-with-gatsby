@@ -1,6 +1,6 @@
 import React from "react"
 import map from "lodash/map"
-import { graphql} from "gatsby"
+import { graphql } from "gatsby"
 import Container, { PrimaryContent } from "../components/Container"
 import IndexBlogEntry from "../components/IndexBlogEntry"
 import SimpleHeader from "../components/SimpleHeader"
@@ -22,10 +22,10 @@ const Layout = ({ data }) => {
             linkTo={post.path}
             author="Ignacio De La Madrid"
             title={post.title}
-            tags={[]}
+            tags={post.tags}
           />
         ))}
-      <Footer/>
+        <Footer />
       </PrimaryContent>
     </Container>
   )
@@ -41,6 +41,7 @@ export const query = graphql`
             path
             date
             excerpt
+            tags
           }
         }
       }
