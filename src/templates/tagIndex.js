@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 const TagIndexTemplate = ({ pageContext }) => {
   const { tags } = pageContext
@@ -7,7 +8,9 @@ const TagIndexTemplate = ({ pageContext }) => {
     <div>
       <ul>
         {tags.map((tagName, index) => (
-          <li index={index}>{tagName}</li>
+          <li key={index}>
+            <Link to={`/tags/${tagName}`}>{tagName}</Link>
+          </li>
         ))}
       </ul>
     </div>

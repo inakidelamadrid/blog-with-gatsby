@@ -1,29 +1,42 @@
 const path = require("path")
 
 const createTagPages = (createPage, posts) => {
-  const tagIndexTemplate = path.resolve("src/templates/tagIndex.js");
+  const tagIndexTemplate = path.resolve("src/templates/tagIndex.js")
+  const tagDetailTemplate = path.resolve("src/templates/tagDetail.js")
 
-  let  postsByTag = {}
+  let postsByTag = {}
 
-  posts.forEach(({node}) => {
-    const tags = node.frontmatter.tags;
-    if(tags){
+  posts.forEach(({ node }) => {
+    const tags = node.frontmatter.tags
+    if (tags) {
       tags.forEach(tag => {
-        if(!postsByTag[tag]){
+        if (!postsByTag[tag]) {
           postsByTag[tag] = []
         }
-        postsByTag[tag].push(node);
+        postsByTag[tag].push(node)
       })
     }
   })
 
-  const tags = Object.keys(postsByTag).sort();
+  const tags = Object.keys(postsByTag).sort()
   createPage({
     path: "/tags",
     component: tagIndexTemplate,
-    context:{
+    context: {
       tags,
-    }
+    },
+  })
+
+  tags.forEach(tagName => {
+    const tagPosts = postsByTag[tagName]
+    createPage({
+      path: `/tags/${tagName}`,
+      component: tagDetailTemplate,
+      context: {
+        posts: tagPosts,
+        tagName,
+      },
+    })
   })
 }
 
@@ -33,9 +46,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const result = await graphql(`
     query {
-      allMarkdownRemark(
-        sort: {order: ASC, fields: [frontmatter___date]}
-      ) {
+      allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___date] }) {
         edges {
           node {
             frontmatter {
@@ -55,7 +66,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const posts = result.data.allMarkdownRemark.edges
 
-  createTagPages(createPage, posts);
+  createTagPages(createPage, posts)
 
   posts.forEach(({ node }, index) => {
     const path = node.frontmatter.path
