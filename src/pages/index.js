@@ -9,7 +9,6 @@ import Footer from "../components/Footer"
 const Layout = ({ data }) => {
   const { edges } = data.allMarkdownRemark
   const posts = map(edges, "node.frontmatter")
-  //console.log("%c Posts", "font-weight: bold; color: blue;", posts)
   return (
     <Container>
       <PrimaryContent>
