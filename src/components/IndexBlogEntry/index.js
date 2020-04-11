@@ -2,10 +2,14 @@ import React from "react"
 import { Link } from "gatsby"
 import styles from "./styles.module.scss"
 import GravatarImage from "../GravatarImage"
+import classNames from "classnames"
 
 const IndexBlogEntry = ({ author, content, datetime, linkTo, tags, title }) => {
   const links = tags.map(tagName => (
-    <Link to={`/tags/${tagName}`} className="label label-primary">
+    <Link
+      to={`/tags/${tagName}`}
+      className={classNames(styles.tag, "label", "label-primary")}
+    >
       {tagName}
     </Link>
   ))
