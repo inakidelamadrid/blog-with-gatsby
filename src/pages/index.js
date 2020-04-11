@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import map from "lodash/map"
 import { graphql } from "gatsby"
+import MainSidebar from "./MainSidebar"
 import Container, {
   PrimaryContent,
   SecondaryContent,
@@ -20,32 +21,7 @@ const Layout = ({ data }) => {
   return (
     <Container>
       <SecondaryContent open={isSidebarOpen}>
-        <aside>
-          <div className="about">
-            <h4>About us</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            </p>
-          </div>
-
-          <div className="tags">
-            <h4>Tags</h4>
-            <ul>
-              <li>
-                <a href="tag.html" className="label label-danger">
-                  CSS3
-                </a>
-              </li>
-              <li>
-                <a href="tag.html" className="label label-primary">
-                  HTML5
-                </a>
-              </li>
-            </ul>
-          </div>
-        </aside>
+        <MainSidebar />
       </SecondaryContent>
       <PrimaryContent isSidebarOpen={isSidebarOpen}>
         <SimpleHeader toggleSidebar={toggleSidebar} />

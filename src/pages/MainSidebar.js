@@ -5,12 +5,14 @@ const MainSidebar = props => {
     <aside>
       <div className="about">
         <h4>About me</h4>
+        <p>Hello, I'm Ignacio.</p>
         <p>
-          Hello, I'm Ignacio.
+          I'm an application layer (mostly Django/Flask but I also like coding
+          some Go) and front-end developer.
         </p>
-        <p>
-          I'm an application layer (mostly Django/Flask based) and front-end developer.
-        </p>
+        <p>I love functional programming.</p>
+        <p>I love React.</p>
+        <p>This blog is made with love using Gatsby.</p>
       </div>
 
       <div className="tags">
