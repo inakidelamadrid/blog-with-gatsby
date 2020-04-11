@@ -1,0 +1,46 @@
+.hidden {
+  display: none;
+}
+
+.shown {
+  display: inline-block;
+}
+
+.sidebar {
+  background: #1c171e;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  overflow-y: auto;
+}
+
+.sidebar aside {
+  color: #c1c0c0;
+  margin: 2em 1em;
+}
+
+.sidebar aside p {
+  font-size: 1.1em;
+}
+
+.sidebar aside h4 {
+  color: #fff;
+}
+
+.sidebar aside div {
+  margin: 2em 0;
+}
+
+.sidebar ul {
+  margin: 0.6em 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar ul li {
+  display: inline-block;
+}
+
+.sidebar ul li a {
+  font-size: 0.8em;
+}

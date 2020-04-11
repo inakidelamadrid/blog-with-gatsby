@@ -5,8 +5,9 @@ import GravatarImage from "../GravatarImage"
 import classNames from "classnames"
 
 const IndexBlogEntry = ({ author, content, datetime, linkTo, tags, title }) => {
-  const links = tags.map(tagName => (
+  const links = tags.map((tagName, index) => (
     <Link
+      key={index}
       to={`/tags/${tagName}`}
       className={classNames(styles.tag, "label", "label-primary")}
     >

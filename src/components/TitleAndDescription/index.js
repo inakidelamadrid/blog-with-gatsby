@@ -17,4 +17,3 @@ const TitleAndDescription = ({ data }) => {
   )
 }
 export default TitleAndDescription
-
