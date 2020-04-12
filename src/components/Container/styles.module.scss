@@ -44,3 +44,12 @@
 .sidebar ul li a {
   font-size: 0.8em;
 }
+
+@media (max-width: 767px) {
+  .sidebar {
+    height: auto;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+}

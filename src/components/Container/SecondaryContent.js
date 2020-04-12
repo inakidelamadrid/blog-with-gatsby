@@ -4,7 +4,6 @@ import classNames from "classnames"
 import styles from "./styles.module.scss"
 
 const SecondaryContent = ({ children, open }) => {
-  console.log("Is open", open);
   const showKlass = open ? styles.shown : styles.hidden;
 
   return (
