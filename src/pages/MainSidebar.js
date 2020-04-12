@@ -14,22 +14,6 @@ const MainSidebar = props => {
         <p>I love React.</p>
         <p>This blog is made with love using Gatsby.</p>
       </div>
-
-      <div className="tags">
-        <h4>Tags</h4>
-        <ul>
-          <li>
-            <a href="tag.html" className="label label-danger">
-              CSS3
-            </a>
-          </li>
-          <li>
-            <a href="tag.html" className="label label-primary">
-              HTML5
-            </a>
-          </li>
-        </ul>
-      </div>
     </aside>
   )
 }
