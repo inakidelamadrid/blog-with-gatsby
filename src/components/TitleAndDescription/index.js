@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const TitleAndDescription = ({ data }) => {
@@ -6,10 +7,10 @@ const TitleAndDescription = ({ data }) => {
 
   return (
     <h1 className="site-title" style={{ marginTop: "0px" }}>
-      <a rel="home" title="Von" href="index.html">
+      <Link to="/" title="Main page">
         <FontAwesomeIcon icon={"coffee"} style={{ marginRight: "20px" }} />
         {title}
-      </a>
+      </Link>
     </h1>
   )
 }

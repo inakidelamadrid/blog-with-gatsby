@@ -27,6 +27,7 @@ const Layout = ({ data }) => {
         <SimpleHeader
           toggleSidebar={toggleSidebar}
           isSidebarOpen={isSidebarOpen}
+          useSidebar
         />
         {map(posts, post => (
           <IndexBlogEntry

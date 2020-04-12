@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import BlogEntry from "../components/BlogEntry"
 import Footer from "../components/Footer"
 import Container, { PrimaryContent } from "../components/Container"
+import SimpleHeader from "../components/SimpleHeader"
 
 const Template = ({ data, pageContext }) => {
   const { markdownRemark } = data
@@ -12,6 +13,7 @@ const Template = ({ data, pageContext }) => {
   return (
     <Container>
       <PrimaryContent>
+        <SimpleHeader />
         <BlogEntry
           datetime={date}
           title={title}
