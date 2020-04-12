@@ -6,18 +6,21 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'Borealsummit\'s Blog',
-    description: 'Thoughts and wanderings'
+    description: "Thoughts and wanderings",
+    githubURL: "https://github.com/inakidelamadrid",
+    linkedinURL: "https://www.linkedin.com/in/ignacio-de-la-madrid-6bb25629/",
+    title: "Borealsummit's Blog",
+    twitterURL: "https://twitter.com/borealsummit",
   },
   plugins: [
-  `gatsby-plugin-sass`,
-  `gatsby-transformer-remark`,
-  {
-    resolve: `gatsby-source-filesystem`,
-    options: {
-      name: `pages`,
-      path: `${__dirname}/src/pages`
-    }
-  }
-],
+    `gatsby-plugin-sass`,
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
+  ],
 }
