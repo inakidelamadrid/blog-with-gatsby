@@ -1,6 +1,8 @@
 import React from "react"
+import map from "lodash/map"
 import styles from "./styles.module.scss"
 import GravatarImage from "../GravatarImage"
+import Tag from "../Tag"
 
 const defaultImage = (
   <img
@@ -8,7 +10,15 @@ const defaultImage = (
     className={styles.imgResponsive}
   />
 )
-const BlogEntry = ({ datetime, description, title, image = defaultImage }) => {
+const BlogEntry = ({
+  datetime,
+  description,
+  tags,
+  title,
+  image = defaultImage,
+}) => {
+  const styledTags = map(tags, tagName => <Tag tagName={tagName} />)
+
   return (
     <>
       {image}
@@ -27,10 +37,7 @@ const BlogEntry = ({ datetime, description, title, image = defaultImage }) => {
             <a className={styles.entryAuthor} href="author.html">
               Ignacio De La Madrid
             </a>{" "}
-            | Tags{" "}
-            <a className="label label-danger" href="tag.html">
-              CSS3
-            </a>
+            | Tags {styledTags}
           </p>
         </header>
         <div

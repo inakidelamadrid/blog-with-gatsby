@@ -5,7 +5,7 @@ const TitleAndDescription = ({ data }) => {
   const { title, description } = data.site.siteMetadata
 
   return (
-    <h1 className="site-title">
+    <h1 className="site-title" style={{ marginTop: "0px" }}>
       <a rel="home" title="Von" href="index.html">
         <FontAwesomeIcon icon={"coffee"} style={{ marginRight: "20px" }} />
         {title}

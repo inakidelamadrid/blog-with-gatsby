@@ -1,14 +1,13 @@
-.header{
+.header {
   height: 50px;
   display: flex;
   align-items: flex-start;
 }
 
-.titleAndDescription{
-  width: 95%;
-  margin-top: 0px;
+.titleAndDescription {
+  width: calc(100% - 40px);
 }
 
-.bars{
-  width: 5%;
+.bars {
+  width: 40px;
 }

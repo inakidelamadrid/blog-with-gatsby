@@ -2,17 +2,11 @@ import React from "react"
 import { Link } from "gatsby"
 import styles from "./styles.module.scss"
 import GravatarImage from "../GravatarImage"
-import classNames from "classnames"
+import Tag from "../Tag"
 
 const IndexBlogEntry = ({ author, content, datetime, linkTo, tags, title }) => {
-  const links = tags.map((tagName, index) => (
-    <Link
-      key={index}
-      to={`/tags/${tagName}`}
-      className={classNames(styles.tag, "label", "label-primary")}
-    >
-      {tagName}
-    </Link>
+  const styledTags = tags.map((tagName, index) => (
+    <Tag key={index} tagName={tagName} />
   ))
   return (
     <section className={styles.post}>
@@ -30,7 +24,7 @@ const IndexBlogEntry = ({ author, content, datetime, linkTo, tags, title }) => {
           <a className="entry-author" href="author.html">
             {author}
           </a>{" "}
-          | Tags {links}
+          | Tags {styledTags}
         </p>
       </header>
       <div className={styles.entryDescription}>{content}</div>

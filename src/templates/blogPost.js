@@ -6,8 +6,8 @@ import Container, { PrimaryContent } from "../components/Container"
 
 const Template = ({ data, pageContext }) => {
   const { markdownRemark } = data
-  const { title, date } = markdownRemark.frontmatter
-  const { next, prev} = pageContext;
+  const { title, date, tags } = markdownRemark.frontmatter
+  const { next, prev } = pageContext
 
   return (
     <Container>
@@ -16,6 +16,7 @@ const Template = ({ data, pageContext }) => {
           datetime={date}
           title={title}
           description={markdownRemark.html}
+          tags={tags}
         />
         {prev && <Link to={prev.frontmatter.path}>Previous</Link>}
         {next && <Link to={next.frontmatter.path}>Next</Link>}
@@ -32,6 +33,7 @@ export const query = graphql`
       frontmatter {
         title
         date
+        tags
       }
     }
   }
