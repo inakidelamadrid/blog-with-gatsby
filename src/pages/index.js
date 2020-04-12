@@ -24,7 +24,10 @@ const Layout = ({ data }) => {
         <MainSidebar />
       </SecondaryContent>
       <PrimaryContent isSidebarOpen={isSidebarOpen}>
-        <SimpleHeader toggleSidebar={toggleSidebar} />
+        <SimpleHeader
+          toggleSidebar={toggleSidebar}
+          isSidebarOpen={isSidebarOpen}
+        />
         {map(posts, post => (
           <IndexBlogEntry
             key={post.path}
