@@ -7,7 +7,7 @@ const TitleAndDescription = ({ data }) => {
   return (
     <h1 className="site-title">
       <a rel="home" title="Von" href="index.html">
-        <FontAwesomeIcon icon={"coffee"} />
+        <FontAwesomeIcon icon={"coffee"} style={{ marginRight: "20px" }} />
         {title}
       </a>
     </h1>
