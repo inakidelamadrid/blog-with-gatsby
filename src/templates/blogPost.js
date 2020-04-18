@@ -1,8 +1,9 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import BlogEntry from "../components/BlogEntry"
 import Footer from "../components/Footer"
 import Container, { PrimaryContent } from "../components/Container"
+import PreviousNextNavigator from "../components/PreviousNextNavigator"
 import SimpleHeader from "../components/SimpleHeader"
 
 const Template = ({ data, pageContext }) => {
@@ -20,8 +21,7 @@ const Template = ({ data, pageContext }) => {
           description={markdownRemark.html}
           tags={tags}
         />
-        {prev && <Link to={prev.frontmatter.path}>Previous</Link>}
-        {next && <Link to={next.frontmatter.path}>Next</Link>}
+        <PreviousNextNavigator prev={prev} next={next} />
         <Footer />
       </PrimaryContent>
     </Container>
