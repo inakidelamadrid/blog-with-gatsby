@@ -6,6 +6,7 @@ import Tag from "../Tag"
 
 const defaultImage = (
   <img
+    alt="decoration of the blog post"
     src="https://source.unsplash.com/random/850x400"
     className={styles.imgResponsive}
   />

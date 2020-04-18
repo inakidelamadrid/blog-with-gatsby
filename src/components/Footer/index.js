@@ -15,7 +15,7 @@ const ActualFooter = ({ githubURL, linkedinURL, twitterURL }) => (
         href={twitterURL}
         title="Twitter"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
       >
         <FontAwesomeIcon icon={["fab", "twitter"]} />
       </a>
@@ -24,7 +24,7 @@ const ActualFooter = ({ githubURL, linkedinURL, twitterURL }) => (
         href={linkedinURL}
         title="LinkedIn"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
       >
         <FontAwesomeIcon icon={["fab", "linkedin"]} />
       </a>
@@ -33,7 +33,7 @@ const ActualFooter = ({ githubURL, linkedinURL, twitterURL }) => (
         href={githubURL}
         title="Github"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
       >
         <FontAwesomeIcon icon={["fab", "github"]} />
       </a>
