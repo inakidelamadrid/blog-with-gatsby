@@ -1,0 +1,19 @@
+.navigator {
+  display: flex;
+  flex-direction: row;
+
+  a {
+    color: #afafaf;
+  }
+}
+.children {
+  flex-basis: 50%;
+
+  svg {
+    margin: 0px 5px;
+  }
+}
+
+.textRight {
+  text-align: right;
+}
