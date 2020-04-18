@@ -1,5 +1,7 @@
-import React, { createContext, useEffect, useState } from "react"
-import { find, map } from "lodash"
+import React, { createContext, createElement, useEffect, useState } from "react"
+import find from "lodash/find"
+import isFunction from "lodash/isFunction"
+import map from "lodash/map"
 export const MediaQueryContext = createContext("source")
 
 const breakpoints = [
@@ -27,7 +29,7 @@ export const MediaListener = ({ children }) => {
       // set listeners for changes in the media
       listeners.forEach(([name, rule]) =>
         rule.addListener(({ matches }) => {
-          if(matches){
+          if (matches) {
             setCurrentBreakpoint(name)
           }
         })
@@ -40,4 +42,29 @@ export const MediaListener = ({ children }) => {
       {children}
     </MediaQueryContext.Provider>
   )
+}
+
+// Media component consumes CurrentBreakpoint, and renders
+export default function Media({ source, mobile, tablet, desktop, wide }) {
+  return createElement(MediaQueryContext.Consumer, null, currentBreakpoint => {
+    return {
+      desktop: checkpoints([desktop, tablet, mobile, source], desktop),
+      mobile: checkpoints([mobile, source], mobile),
+      source: checkpoints([source, mobile], source),
+      tablet: checkpoints([tablet, mobile, source], tablet),
+      wide: checkpoints([wide, desktop, tablet, mobile, source], wide),
+      default: checkpoints([source, mobile]),
+    }[currentBreakpoint]
+  })
+}
+
+function checkpoints(breakpoints, switchOff) {
+  if (switchOff === false || switchOff === null) {
+    return false
+  }
+
+  // check all of our breakpoint props in order, returning the first that has a value
+  const getComponent = find(breakpoints, isFunction)
+  // if we find a matching breakpoint, run it to generate the Element to render
+  return getComponent && getComponent()
 }

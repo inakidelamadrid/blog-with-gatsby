@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { MediaListener } from "../Media"
+import Media, { MediaListener } from "../Media"
 import TitleAndDescription from "../TitleAndDescription"
 import classNames from "classnames"
 import styles from "./styles.module.scss"
@@ -25,17 +25,27 @@ const SimpleHeader = ({ isSidebarOpen, toggleSidebar, useSidebar = false }) => {
             render={data => <TitleAndDescription data={data} />}
           />
         </hgroup>
+        {useSidebar && (
+          <div
+            className={classNames("btn", "btn-primary", styles.bars)}
+            onClick={toggleSidebar}
+          >
+            <Media
+              tablet={() => (
+                <FontAwesomeIcon
+                  icon={isSidebarOpen ? "chevron-right" : "chevron-left"}
+                />
+              )}
+              mobile={() => (
+                <FontAwesomeIcon
+                  icon={isSidebarOpen ? "chevron-up" : "chevron-down"}
+                />
+
+              )}
+            />
+          </div>
+        )}
       </MediaListener>
-      {useSidebar && (
-        <div
-          className={classNames("btn", "btn-primary", styles.bars)}
-          onClick={toggleSidebar}
-        >
-          <FontAwesomeIcon
-            icon={isSidebarOpen ? "chevron-right" : "chevron-left"}
-          />
-        </div>
-      )}
     </header>
   )
 }
