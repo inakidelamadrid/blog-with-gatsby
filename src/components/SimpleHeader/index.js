@@ -26,7 +26,7 @@ const SimpleHeader = ({ isSidebarOpen, toggleSidebar, useSidebar = false }) => {
           />
         </hgroup>
         {useSidebar && (
-          <div
+          <button
             className={classNames("btn", "btn-primary", styles.bars)}
             onClick={toggleSidebar}
           >
@@ -43,7 +43,7 @@ const SimpleHeader = ({ isSidebarOpen, toggleSidebar, useSidebar = false }) => {
 
               )}
             />
-          </div>
+          </button>
         )}
       </MediaListener>
     </header>

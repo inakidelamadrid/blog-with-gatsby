@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const TitleAndDescription = ({ data }) => {
-  const { title, description } = data.site.siteMetadata
+  const { title } = data.site.siteMetadata
 
   return (
     <h1 className="site-title" style={{ marginTop: "0px" }}>
